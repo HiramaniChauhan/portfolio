@@ -129,7 +129,7 @@ const physicalObjects = []; // To sync visual and physics meshes
 
 // Visual Floor — Realistic Grass Texture
 const grassTexLoader = new THREE.TextureLoader();
-const grassTex = grassTexLoader.load('grass_texture.png');
+const grassTex = grassTexLoader.load('/grass_texture.asset');
 grassTex.wrapS = grassTex.wrapT = THREE.RepeatWrapping;
 grassTex.repeat.set(150, 150); // Tile across the huge floor
 const floorGeo = new THREE.PlaneGeometry(4000, 4000);
@@ -899,7 +899,7 @@ const aboutHTML = `
             </div>
             <div class="about-image-side">
                 <div class="hero-image-bg">
-                    <img src="./IMG_1150-removebg-preview-removebg-preview.png" alt="Hiramani Chauhan">
+                    <img src="/profile.asset" alt="Hiramani Chauhan">
                 </div>
             </div>
         </div>
@@ -1231,17 +1231,17 @@ spawn3DTextTrigger(200, 200, "PROJECTS", projectsHTML, "#130201ff");
 const resumeHTML = `
     <div class="resume-container">
         <div class="resume-actions">
-            <a href="./HiramaniChauhan_resume.pdf" download class="resume-download-btn">
+            <a href="/resume.asset" download class="resume-download-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 <span>Download Resume</span>
             </a>
-            <a href="./HiramaniChauhan_resume.pdf" target="_blank" class="resume-open-btn">
+            <a href="/resume.asset" target="_blank" class="resume-open-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>Open in New Tab</span>
             </a>
         </div>
         <div class="resume-viewer">
-            <iframe src="./HiramaniChauhan_resume.pdf" class="resume-iframe" title="Resume PDF Viewer"></iframe>
+            <iframe src="/resume.asset" class="resume-iframe" title="Resume PDF Viewer"></iframe>
         </div>
     </div>
 `;
