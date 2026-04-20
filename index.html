@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>3D WebGL Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bgm" src="Sunny Mornings_ Beautiful Relaxing Music with Piano, Guitar &amp; Bird Sounds by Peder B. Helland 256kbps (mp3cut.net).mp3" loop preload="auto"></audio>
+    <div id="ui-layer">
+        <button id="mute-btn" title="Toggle Music">
+            <span>Sound</span>
+        </button>
+        <button id="map-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+        </button>
+        <button id="sections-btn" title="View All Sections">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <div id="sections-panel" class="hidden">
+            <div class="sections-list glass">
+                <h3 class="sections-heading">All Sections</h3>
+                <button class="section-item" data-section="ABOUT" style="--accent:#4facfe">About</button>
+                <button class="section-item" data-section="PROJECTS" style="--accent:#e74c3c">Projects</button>
+                <button class="section-item" data-section="SKILLS" style="--accent:#ff00dd">Skills</button>
+                <button class="section-item" data-section="RESUME" style="--accent:#00ff88">Resume</button>
+                <button class="section-item" data-section="GITHUB" style="--accent:#8e44ad">GitHub</button>
+                <button class="section-item" data-section="CONTACT" style="--accent:#ffaa00">Contact</button>
+                    
+            </div>
+        </div>
+        <div id="map-ui-container" class="hidden">
+            <div class="glass map-glass">
+                <canvas id="route-map" width="400" height="400"></canvas>
+            </div>
+        </div>
+        <div id="loading">...</div>
+        
+        <div id="modal-container" class="hidden">
+            <div id="modal-content" class="glass">
+                <button id="close-btn">&times;</button>
+                <h2 id="modal-title">Title</h2>
+                <div id="modal-body">Content</div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+    <div id="start-screen">
+        <div id="start-hint">
+            <div class="start-btn-small">Click tractor to start</div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
