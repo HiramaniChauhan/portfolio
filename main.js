@@ -9,7 +9,7 @@ scene.fog = new THREE.Fog('#87CEEB', 400, 4000);
 
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 6000);
 
-let mapMode = false;
+let mapMode = true;
 document.getElementById('map-toggle').addEventListener('click', (e) => {
     mapMode = !mapMode;
     const btn = document.getElementById('map-toggle');
